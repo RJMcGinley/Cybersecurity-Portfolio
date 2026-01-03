@@ -1,28 +1,34 @@
-# Cybersecurity-Portfolio
+# Cybersecurity Portfolio
+
 Python-based security analytics and detection logic focused on identifying anomalous authentication behavior and reducing false positives.
 
-# Security Analytics (Python)
+## Purpose
+This repository contains focused Python examples that demonstrate how I approach **security analysis, detection logic, and signal-to-noise reduction** in a SOC-style context.
 
-This repository contains Python-based security analysis scripts designed to
-detect anomalous behavior while minimizing false positives.
-
-## Current Modules
+The emphasis is on:
+- Explainable logic
+- Practical thresholds
+- Reducing false positives
+- Clear reasoning over black-box rules
 
 ### Login Anomaly Detection
-Analyzes daily login activity against a user-specific historical average.
-Alerts are triggered only when activity exceeds both:
-- a minimum absolute threshold
-- a minimum multiplier threshold
+Analyzes daily login activity against a user-specific historical average. Alerts are triggered only when activity exceeds both:
 
-This approach mirrors real-world SOC alert tuning to reduce noise.
+- A minimum absolute threshold (fixed increase)
+- A minimum proportional threshold (multiplier-based increase)
 
-## Future Additions
-- IP allow/deny analysis
-- Threshold-based alerting examples
-- Authentication behavior baselining
-- Log parsing utilities
-- Detection logic demonstrations
+This mirrors real-world SOC alert tuning, where detections must balance sensitivity with operational noise.
+
+## Portfolio Context
+This repository represents the **analysis and detection** side of my cybersecurity work.
+
+Additional projects in my GitHub profile demonstrate complementary skills such as:
+- Security automation
+- File parsing and configuration hygiene
+- Practical access control maintenance
+
+Together, these projects reflect how detection and response workflows support each other in real security operations.
 
 ## Why This Repo Exists
-Many beginner security scripts focus on binary rules. This repository focuses
-on **behavioral analysis**, **signal vs noise**, and **realistic alerting logic**.
+Many beginner security scripts rely on binary rules (e.g., “greater than X = alert”).  
+This portfolio focuses instead on **behavioral analysis**, **context-aware thresholds**, and **decision-making logic** that can be reasoned about and adjusted over time.
